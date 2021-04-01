@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +19,61 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+#mapid { height: 180px; }
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in;
+}
+
+.rr {
+  background-color: blue;
+}
+
+
+.fadeLeft-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0,0);
+}
+.fadeLeft-enter-active {
+  opacity: 100;
+  transform: translate3d(0,0,0);
+}
+
+.fadeLeft-exit {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.fadeLeft-exit.fadeLeft-exit-active{
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+
+}
+.leaflet-container {
+  width: 100%;
+  min-height: 45vh;
+  max-height: 100vh;
+  border-radius: 0.25rem;
+  z-index: 0;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+ 
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

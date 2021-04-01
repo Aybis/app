@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AboutMe from './Layout/AboutMe';
+import Absensi from './Layout/Absensi';
+import Apps from './Layout/Apps';
+import Inforekan from './Layout/Inforekan';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div>
+        <Switch>
+            <Route exact={true} path="/" >
+              <Home />
+            </Route>
+            <Route path="/login" >
+              <Login />
+            </Route>
+            <Route path="/inforekan" >
+              <Inforekan />
+            </Route>
+            <Route path="/modules">
+              <Apps />
+            </Route>
+            <Route path="/absensi">
+              <Absensi />
+            </Route>
+            <Route path="/me">
+              <AboutMe />
+            </Route>
+        </Switch>
+
     </div>
+      </BrowserRouter>
   );
 }
 
